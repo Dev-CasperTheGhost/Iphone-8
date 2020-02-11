@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Phone</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="phone" id="phone">
+      <div class="off-btn" onclick="off()"></div>
+      <div class="phone-top">
+        <div class="camera"></div>
+        <div class="speaker-long"></div>
+      </div>
+      <div class="phone-bottom">
+        <button
+          class="home-button"
+          id="homeBtn"
+          onclick="homeButton()"
+        ></button>
+      </div>
+      <div class="phone-center">
+        <div class="services">
+          <p class="provider" id="provider">Telenet</p>
+          <p class="time" id="time"></p>
+          <p class="battery" id="battery">82%</p>
+        </div>
+        <div class="on-slider" id="slider">
+          <p>
+            Press Home To Unlock
+          </p>
+        </div>
+        <div class="apps" id="apps">
+          <button class="app btn" onclick="openApp('facetime')">FC</button>
+          <button class="app btn" onclick="openApp('calender')">CA</button>
+          <button class="app btn" onclick="openApp('photos')">PH</button>
+          <button class="app btn" onclick="openApp('')"></button>
+          <button class="app btn" onclick="openApp('')"></button>
+          <button class="app btn" onclick="openApp('')"></button>
+          <button class="app btn" onclick="openApp('')"></button>
+          <button class="app btn" onclick="openApp('')"></button>
+          <button class="app btn" onclick="openApp('')"></button>
+          <button class="app btn" onclick="openApp('')"></button>
+          <button class="app btn" onclick="openApp('')"></button>
+          <button class="app btn" onclick="openApp('')"></button>
+          <button class="app btn" onclick="openApp('')"></button>
+          <button class="app btn" onclick="openApp('')"></button>
+          <button class="app btn" onclick="openApp('')"></button>
+          <button class="app btn" onclick="openApp('')"></button>
+          <button class="app btn" onclick="openApp('')"></button>
+          <button class="app btn" onclick="openApp('')"></button>
+          <button class="app btn" onclick="openApp('')"></button>
+          <button class="app btn" onclick="openApp('')"></button>
+        </div>
+        <div class="bottom-app" id="apps-b">
+          <button class="app btn" onclick="openApp('call')">Call</button>
+          <button class="app btn" onclick="openApp('')"></button>
+          <button class="app btn" onclick="openApp('')"></button>
+          <button class="app btn" onclick="openApp('')"></button>
+        </div>
+
+        <!-- Apps -->
+        <!-- FacetimeApp -->
+        <div class="facetime apper" id="facetime">
+          <h1>FaceTime App</h1>
+        </div>
+        <!-- End FacetimeApp -->
+
+        <!-- CalenderApp -->
+        <div class="calender apper" id="calender">
+          <h1>calender App</h1>
+        </div>
+        <!-- End CalenderApp -->
+
+        <!-- PhotosApp -->
+        <div class="photos apper" id="photos">
+          <h1>photos App</h1>
+        </div>
+        <!-- End PhotosApp -->
+
+        <!-- CallApp -->
+        <div class="call apper" id="call">
+          <h1 class="call-title" id="call-title">Recents</h1>
+          <div class="recents" id="recents">
+            <div class="box border-top" >
+            <h4 class="box-title">Zus N</h4>
+            <h4 class="box-subtitle">FaceTime Video</h4>
+            <h4 class="call-date">Sunday </h4>
+            <div class="circle">i</div>
+            </div>
+            <div class="box" >
+            <h4 class="box-title">Zus N</h4>
+            <h4 class="box-subtitle">FaceTime Video</h4>
+            <h4 class="call-date">Friday </h4>
+            <div class="circle">i</div>
+            </div>
+            <div class="box" >
+            <h4 class="box-title">Mama</h4>
+            <h4 class="box-subtitle">phone</h4>
+            <h4 class="call-date">Friday </h4>
+            <div class="circle">i</div>
+            </div>
+            <div class="box" >
+            <h4 class="box-title">Timon D</h4>
+            <h4 class="box-subtitle">mobile</h4>
+            <h4 class="call-date">Wednesday </h4>
+            <div class="circle">i</div>
+            </div>
+            <div class="box" >
+            <h4 class="box-title">Zus N</h4>
+            <h4 class="box-subtitle">FaceTime Video</h4>
+            <h4 class="call-date">03/02/2020 </h4>
+            <div class="circle">i</div>
+            </div>
+            <div class="box" >
+            <h4 class="box-title missed">Mama</h4>
+            <h4 class="box-subtitle">Phone</h4>
+            <h4 class="call-date">03/02/2020 </h4>
+            <div class="circle">i</div>
+            </div>
+            <div class="box" >
+            <h4 class="box-title">Zus E(2)</h4>
+            <h4 class="box-subtitle">Phone</h4>
+            <h4 class="call-date">02/02/2020 </h4>
+            <div class="circle">i</div>
+            </div>
+            <div class="box" >
+            <h4 class="box-title">Mama(3)</h4>
+            <h4 class="box-subtitle">Phone</h4>
+            <h4 class="call-date">31/01/2020 </h4>
+            <div class="circle">i</div>
+            </div>
+          </div>
+        </div>
+        <!-- End CallApp -->
+
+
+      </div>
+      </div>
+
+
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
