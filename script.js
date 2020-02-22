@@ -7,10 +7,12 @@ let battery = document.getElementById("battery")
 let provider = document.getElementById("provider");
 let time = document.getElementById("time")
 let d = new Date()
-
+let boxe = document.getElementById("boxe")
+let calling = document.getElementById("calling")
+let callTime = 0;
 // Apps 
 let facetime = document.getElementById("facetime")
-let calender = document.getElementById("calender")
+let mail = document.getElementById("mail")
 let photos = document.getElementById("photos")
 let call = document.getElementById("call")
 
@@ -32,8 +34,10 @@ function button() {
 
 function homeButton() {
     facetime.style.display = "none"
-    calender.style.display = "none"
+    mail.style.display = "none"
     photos.style.display = "none"
+    document.getElementById("recents").style.display = "none"
+    document.getElementById("call-title").style.display = "none"
     // facetime.style.display = "none"
     // facetime.style.display = "none"
     phoneBackground.style.background = "url('./images/wallpaper.png')"
@@ -59,8 +63,9 @@ function openApp(appName) {
 
     if (appName == "facetime") {
         facetime.style.display = "block"
-    } else if (appName == "calender") {
-        calender.style.display = "block"
+    } else if (appName == "mail") {
+        mail.style.display = "block"
+        phoneBackground.style.backgroundColor = "rgba(0,0,0,0.9)"
     } else if (appName == "photos") {
         photos.style.display = "block"
     } else if (appName == "call") {
@@ -77,6 +82,8 @@ function off() {
     photos.style.display = "none"
     slider.style.display = "none"
     time.style.display = "none"
+    document.getElementById("recents").style.display = "none"
+    document.getElementById("call-title").style.display = "none"
     provider.style.display = "none"
     battery.style.display = "none"
     homeBtn.removeEventListener("click", button, false)
@@ -84,4 +91,40 @@ function off() {
     bottomApps.style.display = "none";
     phoneBackground.style.background = "none";
     phoneBackground.style.backgroundColor = "rgba(0,0,0,0.9)"
+}
+
+
+function callNumber(name) {
+    boxe.addEventListener('mousedown', (event) => {
+        console.log("holding")
+        setTimeout(function () {
+            document.getElementById("menu").style.display = "block"
+            document.getElementById("menuTitle").textContent = `${name}`
+        }, 1000);
+        document.getElementById("menu").addEventListener("click", () => {
+            document.getElementById("menu").style.display = "none"
+        })
+    });
+
+
+
+    setInterval(() => {
+        callTime++
+        document.getElementById("call-time").textContent = callTime.toLocaleString();
+    }, 1000);
+
+
+
+    document.getElementById("recents").style.display = "none"
+    document.getElementById("call-title").style.display = "none"
+    document.getElementById("caller").textContent = `${name}`
+    // call.style.display = "none"
+    calling.style.display = "block"
+}
+function endCall() {
+    document.getElementById("recents").style.display = "block"
+    document.getElementById("call-title").style.display = "block"
+    // call.style.display = "none"
+    calling.style.display = "none"
+    callTime = 0;
 }

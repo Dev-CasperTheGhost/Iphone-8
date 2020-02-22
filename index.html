@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Phone</title>
     <link rel="stylesheet" href="style.css" />
+    <script src="https://kit.fontawesome.com/57b65d1d2a.js" crossorigin="anonymous"></script>
   </head>
   <body>
     <div class="phone" id="phone">
@@ -33,7 +34,7 @@
         </div>
         <div class="apps" id="apps">
           <button class="app btn" onclick="openApp('facetime')">FC</button>
-          <button class="app btn" onclick="openApp('calender')">CA</button>
+          <button class="app btn" onclick="openApp('mail')">ML</button>
           <button class="app btn" onclick="openApp('photos')">PH</button>
           <button class="app btn" onclick="openApp('')"></button>
           <button class="app btn" onclick="openApp('')"></button>
@@ -63,13 +64,91 @@
         <!-- Apps -->
         <!-- FacetimeApp -->
         <div class="facetime apper" id="facetime">
-          <h1>FaceTime App</h1>
+          <h5 class="facetime-appbar"><span class="fc-1">Edit</span> <span class="fc-2"><i class="fas fa-plus"></i></span> </h5>
+          <h1 class="app-title">FaceTime</h1>
+          <div class="boxes">
+            <div class="fcb-box border-top">
+
+            <div class="fc-box">
+              <div class="box-title">Zus N</div>
+              <div class="box-subtitle">FaceTime Video</div>
+              <h4 class="call-date">Yesterday </h4>
+              <div class="circle">i</div>
+            </div>
+          </div>
+
+            <div class="fcb-box">
+            <div class="fc-box">
+              <div class="box-title">Papa</div>
+              <div class="box-subtitle">FaceTime Audio</div>
+              <h4 class="call-date">18/01/2020 </h4>
+              <div class="circle">i</div>
+            </div>
+          </div>
+
+            <div class="fcb-box">
+            <div class="fc-box">
+              <div class="box-title">Mama</div>
+              <div class="box-subtitle">FaceTime Video</div>
+              <h4 class="call-date">17/08/2019</h4>
+              <div class="circle">i</div>
+            </div>
+          </div>
+            <div class="fcb-box">
+            <div class="fc-box">
+              <div class="box-title">Zus N</div>
+              <div class="box-subtitle">FaceTime Video</div>
+              <h4 class="call-date">1year ago </h4>
+              <div class="circle">i</div>
+            </div>
+            </div>
+          </div>
         </div>
         <!-- End FacetimeApp -->
 
         <!-- CalenderApp -->
-        <div class="calender apper" id="calender">
-          <h1>calender App</h1>
+        <div class="mail apper" id="mail">
+          <h1 class="app-title">Mailboxes</h1>
+          <div class="mailboxes">
+            
+            <div class="mailbox">
+              <h4 class="box-title"><i class="fas fa-inbox"></i> iCloud</h4>
+            </div>
+            <div class="mailbox">
+              <h4 class="box-title"><i class="fas fa-inbox"></i> Gmail</h4>
+            </div>
+            <div class="mailbox">
+              <h4 class="box-title"><i class="fas fa-inbox"></i> Outlook</h4>
+            </div>
+            <div class="mailbox">
+              <h4 class="box-title"><i class="fas fa-inbox"></i> VIP</h4>
+            </div>
+            <div class="mailbox">
+              <h4 class="box-title"><i class="fas fa-inbox"></i> Flagged</h4>
+            </div>
+            <div class="mailbox">
+              <h4 class="box-title"><i class="fas fa-inbox"></i> Today</h4>
+            </div>
+            <div class="mailbox">
+              <h4 class="box-title"><i class="fas fa-inbox"></i> All Bins</h4>
+            </div>
+            <div class="mail-p-title">ICLOUD</div>
+            <div class="mailbox">
+              <h4 class="box-title"><i class="fas fa-inbox"></i> Inbox</h4>
+            </div>
+            <div class="mailbox">
+              <h4 class="box-title"><i class="fas fa-inbox"></i> Drafts</h4>
+            </div>
+            <div class="mailbox">
+              <h4 class="box-title"><i class="fas fa-inbox"></i> Sent</h4>
+            </div>
+            <div class="mailbox">
+              <h4 class="box-title"><i class="fas fa-inbox"></i> Junk</h4>
+            </div>
+            <div class="mail-end">
+              <h5 class="mail-end-title">Updated Just Now</h5>
+            </div>
+          </div>
         </div>
         <!-- End CalenderApp -->
 
@@ -81,51 +160,65 @@
 
         <!-- CallApp -->
         <div class="call apper" id="call">
+          <div class="calling" id="calling">
+            <h1 class="caller" id="caller"></h1>
+            <h6 class="call-time" id="call-time">0</h6>
+            <div class="buttons">
+              <button class="call-button">M</button>
+              <button class="call-button">K</button>
+              <button class="call-button">A</button>
+              <!-- <br> -->
+              <button class="call-button">Add</button>
+              <button class="call-button">F</button>
+              <button class="call-button">C</button>
+            </div>
+            <button class="end-call" onclick="endCall()">END</button>
+          </div>
           <h1 class="call-title" id="call-title">Recents</h1>
           <div class="recents" id="recents">
-            <div class="box border-top" >
+            <div class="box border-top" id="boxe" onclick="callNumber('Zus N')" >
             <h4 class="box-title">Zus N</h4>
             <h4 class="box-subtitle">FaceTime Video</h4>
             <h4 class="call-date">Sunday </h4>
             <div class="circle">i</div>
             </div>
-            <div class="box" >
+            <div class="box" id="boxe" onclick="callNumber('Zus N')">
             <h4 class="box-title">Zus N</h4>
             <h4 class="box-subtitle">FaceTime Video</h4>
             <h4 class="call-date">Friday </h4>
             <div class="circle">i</div>
             </div>
-            <div class="box" >
+            <div class="box" id="boxe" onclick="callNumber('Mama')">
             <h4 class="box-title">Mama</h4>
             <h4 class="box-subtitle">phone</h4>
             <h4 class="call-date">Friday </h4>
             <div class="circle">i</div>
             </div>
-            <div class="box" >
+            <div class="box" id="boxe" onclick="callNumber('Timon D')">
             <h4 class="box-title">Timon D</h4>
             <h4 class="box-subtitle">mobile</h4>
             <h4 class="call-date">Wednesday </h4>
             <div class="circle">i</div>
             </div>
-            <div class="box" >
+            <div class="box" id="boxe" onclick="callNumber('Zus N')">
             <h4 class="box-title">Zus N</h4>
             <h4 class="box-subtitle">FaceTime Video</h4>
             <h4 class="call-date">03/02/2020 </h4>
             <div class="circle">i</div>
             </div>
-            <div class="box" >
+            <div class="box" id="boxe" onclick="callNumber('Mama')">
             <h4 class="box-title missed">Mama</h4>
             <h4 class="box-subtitle">Phone</h4>
             <h4 class="call-date">03/02/2020 </h4>
             <div class="circle">i</div>
             </div>
-            <div class="box" >
+            <div class="box" id="boxe" onclick="callNumber('Zus E')">
             <h4 class="box-title">Zus E(2)</h4>
             <h4 class="box-subtitle">Phone</h4>
             <h4 class="call-date">02/02/2020 </h4>
             <div class="circle">i</div>
             </div>
-            <div class="box" >
+            <div class="box" id="boxe" onclick="callNumber('Mama')">
             <h4 class="box-title">Mama(3)</h4>
             <h4 class="box-subtitle">Phone</h4>
             <h4 class="call-date">31/01/2020 </h4>
@@ -139,8 +232,22 @@
       </div>
       </div>
 
+      <!-- <div id="menu">
+        <div class="menu-infobox">
+          <div class="menu-circle"></div>
+          <h4 class="menu-title" id="menuTitle"></h4>
+          <h4 class="menu-subtitle">Phone</h4>
+        </div>
+        <div class="menu-buttons">
+  
+            <h4 class="menu-box-title">Message</h4>
+            <h4 class="menu-box-title">Call</h4>
+            <h4 class="menu-box-title">Video</h4>
+        </div>
+      </div> -->
 
     </div>
+
 
     <script src="./script.js"></script>
   </body>

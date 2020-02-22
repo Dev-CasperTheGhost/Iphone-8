@@ -92,6 +92,7 @@
 }
 
 .app {
+  background-color: white;
   cursor: pointer;
   margin: 10px;
   width: 60px;
@@ -179,7 +180,7 @@
   display: none;
 }
 
-.calender {
+.mail {
   display: none;
 }
 
@@ -202,6 +203,10 @@
 .box {
   margin: 0px;
   border-bottom: 2px solid rgba(0, 0, 0, 0.7);
+}
+
+.box:active {
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
 .box-title {
@@ -252,4 +257,184 @@
 
 .border-top {
   border-top: 2px solid rgba(0, 0, 0, 0.7);
+}
+
+.calling {
+  display: none;
+  position: relative;
+  margin-top: 40px;
+  /* margin-left: 20px; */
+  color: white;
+  margin-right: 20px;
+  margin-bottom: 5px;
+}
+
+.caller {
+  position: relative;
+  left: 35%;
+  transform: translate(-0%);
+  text-transform: capitalize;
+  font-size: 40px;
+}
+
+.buttons {
+  position: relative;
+  left: 18%;
+  transform: translate(-10%);
+  margin-top: 70px;
+}
+
+.call-button {
+  border-radius: 70px;
+  outline: none;
+  font-weight: bolder;
+  color: white;
+  border: 2px solid rgba(0, 0, 0, 0.004);
+  background-color: rgba(0, 0, 0, 0.5);
+  margin: 15px;
+  width: 70px;
+  height: 70px;
+  cursor: pointer;
+}
+
+.end-call {
+  position: relative;
+  left: 52%;
+  transform: translate(-50%);
+  border-radius: 70px;
+  outline: none;
+  font-weight: bolder;
+  color: white;
+  border: 2px solid red;
+  background-color: red;
+  margin-top: 65px;
+  width: 70px;
+  height: 70px;
+  cursor: pointer;
+}
+
+.call-time {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 20px;
+  position: relative;
+  left: 50%;
+  transform: translate(-0%);
+}
+
+#menu {
+  font-family: sans-serif;
+  color: white;
+  display: none;
+  position: absolute;
+  width: 350px;
+  height: 200px;
+  z-index: 1500;
+  top: 10%;
+  left: 10%;
+  transform: translate(-30%, -10%);
+}
+
+.menu-infobox {
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.menu-title {
+  position: relative;
+  margin-left: 70px;
+  top: 10%;
+  transform: translateY(80%);
+}
+.menu-subtitle {
+  position: relative;
+  margin-left: 70px;
+  top: 10%;
+  transform: translateY(-20%);
+}
+
+.menu-circle {
+  border-radius: 45px;
+  border: 2px solid white;
+  background-color: gray;
+  width: 45px;
+  height: 45px;
+  position: absolute;
+  margin-left: 10px;
+  top: 14%;
+}
+
+.menu-buttons {
+  margin-top: -15px;
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.menu-box-title {
+  height: 30px;
+  margin: 20px;
+  font-size: 20px;
+  margin-left: 30px;
+  margin-top: 20px;
+}
+
+/* FaceTime APP */
+.app-title {
+  margin-top: 40px;
+  margin-left: 20px;
+  color: white;
+  margin-right: 20px;
+  margin-bottom: 5px;
+}
+
+.fcb-box {
+  border-bottom: 2px solid rgba(0, 0, 0, 0.5);
+}
+
+.fc-box {
+  font-weight: bold;
+  margin-left: 20px;
+}
+
+.facetime-appbar {
+  margin-top: 40px;
+  margin-left: 20px;
+  color: white;
+  margin-right: 20px;
+  margin-bottom: 5px;
+  display: flex;
+  flex-direction: row;
+}
+
+.fc-1 {
+  color: blue;
+  cursor: pointer;
+}
+
+.fc-2 {
+  color: blue;
+  cursor: pointer;
+  margin-left: 300px;
+}
+
+/* Mail App */
+.mailboxes {
+  margin-top: 20px;
+  /* border: 2px solid rgba(0, 0, 0, 0.3); */
+}
+
+.mailbox {
+  margin-top: 1px;
+  border: 2px solid rgba(0, 0, 0, 0.3);
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.mail-end {
+  position: relative;
+  bottom: 10px;
+}
+
+.mail-end-title {
+  color: white;
+  text-align: center;
 }
